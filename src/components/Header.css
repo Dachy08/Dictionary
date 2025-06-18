@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 52px;
+}
+
+.header .logo {
+  height: 32px;
+  width: auto;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.separator {
+  width: 1px;
+  height: 32px;
+  background-color: var(--divider);
+}
+
+@media (max-width: 480px) {
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .controls {
+    gap: 16px;
+  }
+}
+

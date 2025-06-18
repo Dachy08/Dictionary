@@ -1,0 +1,98 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* CSS VARIABLES */
+:root {
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Lora', serif;
+  --font-mono: 'Inconsolata', monospace;
+
+  /* Primary */
+  --color-purple: #A445ED;
+  --color-red: #FF5252;
+
+  /* Neutral Colors (Light Theme) */
+  --bg-main-light: #FFFFFF;
+  --bg-input-light: #F4F4F4;
+  --text-main-light: #2D2D2D;
+  --text-secondary-light: #757575;
+  --divider-light: #E9E9E9;
+
+  /* Neutral Colors (Dark Theme) */
+  --bg-main-dark: #050505;
+  --bg-input-dark: #1F1F1F;
+  --text-main-dark: #FFFFFF;
+  --text-secondary-dark: #757575; /* Same as light */
+  --divider-dark: #3A3A3A;
+}
+
+/* GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 58px 24px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 24px;
+  }
+}
+
+.container {
+  max-width: 737px;
+  margin: 0 auto;
+}
+
+/* THEME AND FONT CLASSES */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.light {
+  --bg-main: var(--bg-main-light);
+  --bg-input: var(--bg-input-light);
+  --text-main: var(--text-main-light);
+  --text-secondary: var(--text-secondary-light);
+  --divider: var(--divider-light);
+}
+
+.dark {
+  --bg-main: var(--bg-main-dark);
+  --bg-input: var(--bg-input-dark);
+  --text-main: var(--text-main-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --divider: var(--divider-dark);
+}
+
+button, input {
+  font-family: inherit;
+}
+

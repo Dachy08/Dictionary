@@ -1,0 +1,69 @@
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #757575;
+  transition: .4s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Slider is purple when checked OR on hover */
+input:checked + .slider,
+.toggle-container:hover .slider {
+  background-color: var(--color-purple);
+}
+
+/* Move the circle when checked */
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* --- SVG Icon Styling --- */
+.toggle-container svg {
+  cursor: pointer;
+}
+
+/* Default icon color is a light grey */
+.toggle-container svg path {
+  stroke: #E9E9E9;
+  transition: stroke 0.3s;
+}
+
+/* On hover, icon becomes purple */
+.toggle-container:hover svg path {
+  stroke: var(--color-purple);
+}

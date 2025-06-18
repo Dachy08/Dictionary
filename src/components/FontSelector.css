@@ -1,0 +1,66 @@
+.font-selector {
+  position: relative;
+}
+
+.font-selector-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--color-purple);
+}
+
+.font-selector-button span {
+  color: var(--text-main);
+}
+
+.font-selector-button:hover span {
+  color: var(--color-purple);
+}
+
+.font-selector-dropdown {
+  position: absolute;
+  top: calc(100% + 18px);
+  right: 0;
+  background: var(--bg-main);
+  border-radius: 16px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 24px;
+  margin: 0;
+  width: 183px;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.dark .font-selector-dropdown {
+    background: var(--bg-input);
+    box-shadow: 0 5px 30px var(--color-purple);
+}
+
+.font-selector-dropdown li {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.font-selector-dropdown li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.font-selector-dropdown li:hover {
+  color: var(--color-purple);
+}
+
+@media (max-width: 480px) {
+    .font-selector-button {
+        font-size: 14px;
+        gap: 16px;
+    }
+}
+
